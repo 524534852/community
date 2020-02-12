@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /community
+
+
+spring:
+  thymeleaf:
+    cache=false:
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/community?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: yhj123456a
+#MybatisProperties
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: bristol.yhj.community.entity
+  configuration:
+    use-generated-keys: true
+    map-underscore-to-camel-case: true
+
